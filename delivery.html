@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title contenteditable="true">Food Ordering and Delivery</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="delivery.css">
+  <script src="delivery.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="he">
+
+      <div class="main_head container-fluid">
+        <div class="logo"><a href="./food_restaurant.html"> <img src="./image/logo_chef.jfif" alt=" not found"
+              height="100px" width="100px">
+          </a></div>
+        <h1>Mr.Chef</h1>
+
+        <div class="states">
+          <!-- <label for="state" class="choose">Choose a state:</label> -->
+          <span class="glyphicon glyphicon-map-marker "></span>
+          <select name="state" id="state">
+            <option value="">Select state</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+
+        </div>
+        <div class="search">
+          <input class="search" id="home-search" maxlength="100" value="" placeholder="Search for food" autocomplete="">
+          <button class="search_button">
+            Search
+          </button>
+        </div>
+
+        <div class="login" text-right>
+          <button class="login" onclick="myFunction()">Log out</a></button>
+          <!-- <button class="Sign_up">Sign up</button> -->
+        </div>
+      </div>
+  </header>
+  
+  <div class="row">
+    <div class="col-md-6 left-img" >
+
+    </div>
+    <div class="col-md-6 " style="background-image:url(back2_.jpg);opacity: 1;">
+      <h2 id="r">Food Ordering and Delivery</h2>
+      <div id="bck">
+        <form class="frm w-100">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name *</label>
+              <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name *</label>
+              <input type="text" class="form-control" id="lastName" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Email Address *</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phone">Phone Number *</label>
+              <input type="number" class="form-control" id="phone" pattern="[0-9]{5}[0-9]{5}" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">Pin Code *</label>
+              <input type="text" class="form-control" id="code" pattern="[0-9]{3}[0-9]{3}" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="locality">Locality *</label>
+              <input type="text" class="form-control" id="locality" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address(Area and Street) *</label>
+
+            <textarea class="form-control" id="address" required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+
+              <label for="firstName">City/District/Town *</label>
+              <input type="text" class="form-control" id="cdt" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phone">Alternate Phone Number(optional)</label>
+              <input type="number" class="form-control" id="phone" pattern="[0-9]{5}[0-9]{5}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="" class="form-label mt-4">Select state</label>
+              <select class="form-select form-control">
+
+                <option value="">Select</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6 mt-4">
+
+              <label for="firstName">Landmark(optional)</label>
+              <input type="text" class="form-control" id="firstName">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="instructions">Delivery Instructions</label>
+            <textarea class="form-control" id="instructions" rows="3"></textarea>
+          </div>
+          <div class="butt"> <button type="button" class="btn btn-warning border-color-dark" id="validate" onclick="validateAndPay()">Pay
+            </button></div>
+          <br>
+        </form>
+
+        <div id="orderSummary" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi4jizo"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="logo-icon" href="./image/logo_chef.jfif">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNS3vx" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM"></script>
+</body><br><br>
+
+<!-- footer -->
+<footer class="bg-dark text-light py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>About Us</h3>
+        <p>We are a family-owned restaurant that has been serving delicious food for over 20 years. Our menu features a
+          wide variety of dishes made with the freshest ingredients.</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Contact Us</h3>
+
+        <p>Mr.Chef<br>
+          Paryatan Bhavan, 2nd Floor, Patto,<br>
+          Tamilnadu, India 403001 <br><br>
+        </p>
+
+        <span class="glyphicon glyphicon-phone-alt" id="b"></span>
+        Contact No: 0832-2494204 <br>
+        <span class="glyphicon glyphicon-envelope" id="b"></span> Email: mr.chef@nic.in
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h3>Legal</h2>
+          <ul class="no-bullets">
+
+            <li>Terms & Conditions</li>
+            <li>Refund & Cancellation</li>
+            <li>Privacy Policy </li>
+            <li> Cookie Policy</li>
+            <li> Offer Terms
+            <li> Phishing & Fraud</li>
+      </div>
+
+      <div class="col-md-3">
+        <h3>Follow Us</h3>
+        <div class="list-unstyled">
+          <a href="https://facebook.com/" target="_blank" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+          <a href="https://google.com/" target="_blank" class="fa fa-google"></a>
+          <a href="https://youtube.com/" target="_blank" class="fa fa-youtube"></a>
+          <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+
+      {
+            window.location.href = "logsign.html";
+        
+  
+      }}
+    </script>
+</footer>
+
+</html>

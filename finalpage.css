@@ -1,0 +1,155 @@
+*{
+      margin: 0%;
+      padding: 0%;
+     font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+    }
+    body {
+      background-color: #f8f9fa;
+    }
+    
+    .header {
+      background-color: #ff9f43;
+      color: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .header h1 {
+      font-size: 3rem;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+    
+    .details {
+      background-color: #fff;
+      padding: 2rem;
+      margin-top: 3rem;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    li {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      margin-top: 2rem;
+      border-radius: 0;
+    }
+    
+    .food-images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+    }
+    
+    .food-images img {
+      max-width: 30%;
+      margin-bottom: 1rem;
+    }
+    
+    .delivery-img {
+      max-width: 100%;
+      margin-top: 3rem;
+    }
+  
+    /* Footer Styles */
+  
+
+  footer{
+    margin-left: -215px;
+    margin-right: -220px;
+    margin-top: 150px;
+  }
+    
+    footer p {
+      margin-bottom: 0;
+      font-size: 20px;
+      margin: 0%;
+  padding: 0%;
+ 
+  
+    }
+    #b{
+      color: white;
+    }
+    .fa {
+      padding: 17px;
+      font-size: 30px;
+      height:60px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50px;
+      
+  
+  
+  
+    }
+    .col-md-3{
+      text-align: left;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    
+    
+    
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #c33636;
+      color: white;
+    }
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  ul, ol {
+      margin: 0 0 1rem 2rem;
+      
+    }
+          
+    ul.no-bullets {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+  
