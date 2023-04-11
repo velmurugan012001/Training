@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sens-serif;
+}
+.body_main{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+
+}
+.close {
+    position: absolute;
+    right: 32px;
+    top: 105px;
+
+    right:500px;
+    width: 32px;
+    height: 30px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  .toggle-btn{
+   
+    background-color: #333;
+
+  }
+.form_box{
+    width: 435px;
+    height: 455px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    position: relative;
+    overflow: hidden;
+}
+.btn-box{
+    width: 220px;
+    margin: 40px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30 px;
+}
+.toggle-btn{
+    padding: 10px 33px;
+    cursor: pointer;
+    background: transparent;
+    display: inline-block;
+    color: #141414;
+    position: relative;
+    outline: none;
+    border-radius: 30px;
+    
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 106px;
+    height: 100%;
+    background: linear-gradient(to right, #ff00009a, #580303b9);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group{
+    top: 128px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    margin-left: 30px;
+}
+.input-field{
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 30px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.ps{
+    font-family: sens-serif;
+    color: #333;
+    border-right: 30px;
+    opacity: .8;
+    font-size: 1px !important;
+  
+   
+   
+    transition: .5s;
+
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff00009a, #580303b9);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#signup{
+    left: 450px;
+}

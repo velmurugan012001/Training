@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="regi">
+    
+
+    
+    <form name="register">
+    <label for="fn">First name :</label>
+     <input type="text" id="fn" ><br><br>
+     <label for="ln">Last name :</label>
+     <input type="text" id="ln"><br><br>
+     <label for="ln">Email id :</label>
+     <input type="text" id="ln"><br><br>
+     <label for="passwd">password :</label>
+     <input type="password"  id="passwd"><br><br>
+     <label for="cpasswd">confrim password :</label>
+     <input type="password area" name="" id="cpasswd"><br><br>
+     <label for="Adresss">Address : </label>
+     <textarea name="Adresss:" id="Address" cols="20" rows="2"></textarea><br><br>
+     <label for="mob">mobile :</label>
+     <input type="number" name="" id="mob" min="10" max="50" pattern="{3}{3}{4}"><br><br>
+     <label for="">Gender :</label>
+    <input type="radio" id="m" name="gen"><label for="m">male</label>
+    <input type="radio" id="f" name="gen" ><label for="f">female</label><br><br>
+    <label for="hob">Hobbie :</label>
+    <input type="text"><br><br>
+    <label for="num">number :</label>
+    <input type="checkbox" name="" id="num"><br><br>
+    <label for="col">favourt color :</label>
+    <input type="color"><br><br>
+    <label for="dob">DOB :</label>
+    <input type="date" name="" id="dob"><br><br>   
+     <label for="cou">your country :</label>
+    <input list="countries" id="cou">
+    <datalist id="countries">
+        <option value="india"></option>
+        <option value="uk"></option>
+        <option value="amarica"></option>
+
+    </datalist> <br><br>
+    <input type="submit" value="check me">
+    <input type="reset" value="cencel">
+
+
+
+    </form>
+</body>
+
+</html>

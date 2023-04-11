@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log in</title>
+    <link rel="stylesheet" type="text/css" href="logsign.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="body_main">
+        <div>
+            <a href="#" class="close"></a>
+        </div>
+        <div class="form_box">
+            <div class="btn-box">
+                <div id="btn">
+
+                </div>
+                <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Sign up</button>
+
+            </div>
+
+            <form id="login" class="input-group">
+
+                <input type="tel" class="input-field" id="phone" placeholder="Mobile Number" pattern="[0-9]{5}[0-9]{5}"
+                    required>
+                <input type="password" class="input-field" id="myInput" placeholder="Enter Password" required><br><br>
+
+                <input type="checkbox" class="ps" onclick="myFnction()">Show Password<br>
+
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn" onclick="myfunc()">Log in</button>
+            </form>
+            <form id="signup" class="input-group">
+                <input type="tel" class="input-field" id="phone" placeholder="Mobile Number" pattern="[0-9]{5}[0-9]{5}"
+                    required>
+                <input type="email" class="input-field" id="myEmail" placeholder="Email "
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                <input type="password" class="input-field" id="pass" placeholder="Enter Password" required><br>
+                <input type="checkbox" class="ps" onclick="myFunction()">Show Password<br>
+                <input type="password" class="input-field" id="cnpass" placeholder="Confirm Password" required><br>
+                <input type="checkbox" class="ps" onclick="myFuntion()">Show Password<br>
+                <input type="checkbox" class="check-box"><span>I agree to the <a href="#"> terms</a> and <a href="#">
+                        contidions</a></span>
+                <button type="submit" id="btnSubmit" class="submit-btn">signup</button>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("signup");
+        var z = document.getElementById("btn");
+
+        function signup() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var password = $("#pass").val();
+                var confirmPassword = $("#cnpass").val();
+                if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            })
+        })
+        function myFunction() {
+            var x = document.getElementById("myEmail").pattern;
+            document.getElementById("demo").innerHTML = x;
+        }
+        function myFnction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function myFunction() {
+            var x = document.getElementById("pass");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function myFuntion() {
+            var x = document.getElementById("cnpass");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        function myfunc() {
+  alert("You are successfully login!");
+}
+
+
+
+    </script>
+
+</body>
+
+</html>
