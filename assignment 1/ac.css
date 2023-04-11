@@ -1,0 +1,33 @@
+body{
+    background-color: #0ca2b9;
+    width: 80%;
+    margin-left: 10%;
+}
+h1{
+   color: #ffffff;
+   font-style: italic;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   background-color: #900043;
+   text-align: center;
+
+}
+#submit,#reset{
+    font-weight: bold;
+    background-color: #556b2f;
+    width: 10em;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    }
+ 
+#reset{
+    margin-left: 30%;
+}   
+    table,
+    tr,td{
+        width: 60%;
+        margin-top: -25%;
+        padding-left: 30px;
+
+    }
