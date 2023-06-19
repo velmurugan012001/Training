@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Page</title>
+	<!-- Add Bootstrap stylesheet -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Add custom stylesheet -->
+	<link rel="stylesheet" type="text/css" href="payment.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="logo-icon" href="./image/logo_chef.jfif">
+	<script src="payment.js"></script>
+</head>
+<body> <header>
+	<div class="he">
+  
+	  <div class="main_head container-fluid">
+	    <div class="logo"><a href="./food_restaurant.html"> <img src="./image/logo_chef.jfif" alt=" not found"
+		    height="100px" width="100px">
+		</a></div>
+	    <h1>Mr.Chef</h1>
+  
+	    <div class="states">
+		<!-- <label for="state" class="choose">Choose a state:</label> -->
+		<span class="glyphicon glyphicon-map-marker "></span>
+		<select name="state" id="state">
+		  <option value="">Select state</option>
+		  <option value="Andhra Pradesh">Andhra Pradesh</option>
+		  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+		  <option value="Assam">Assam</option>
+		  <option value="Bihar">Bihar</option>
+		  <option value="Chhattisgarh">Chhattisgarh</option>
+		  <option value="Goa">Goa</option>
+		  <option value="Gujarat">Gujarat</option>
+		  <option value="Haryana">Haryana</option>
+		  <option value="Himachal Pradesh">Himachal Pradesh</option>
+		  <option value="Jharkhand">Jharkhand</option>
+		  <option value="Karnataka">Karnataka</option>
+		  <option value="Kerala">Kerala</option>
+		  <option value="Madhya Pradesh">Madhya Pradesh</option>
+		  <option value="Maharashtra">Maharashtra</option>
+		  <option value="Manipur">Manipur</option>
+		  <option value="Meghalaya">Meghalaya</option>
+		  <option value="Mizoram">Mizoram</option>
+		  <option value="Nagaland">Nagaland</option>
+		  <option value="Odisha">Odisha</option>
+		  <option value="Punjab">Punjab</option>
+		  <option value="Rajasthan">Rajasthan</option>
+		  <option value="Sikkim">Sikkim</option>
+		  <option value="Tamil Nadu">Tamil Nadu</option>
+		  <option value="Telangana">Telangana</option>
+		  <option value="Tripura">Tripura</option>
+		  <option value="Uttar Pradesh">Uttar Pradesh</option>
+		  <option value="Uttarakhand">Uttarakhand</option>
+		  <option value="West Bengal">West Bengal</option>
+		</select>
+  
+	    </div>
+	    <div class="search">
+		<input class="search" id="home-search" maxlength="100" value="" placeholder="Search for food" autocomplete="">
+		<button class="search_button">
+		  Search
+		</button>
+	    </div>
+  
+	    <div class="login" text-right>
+		<button class="login" onclick="myFunction()">Log out</a></button>
+		<!-- <button class="Sign_up">Sign up</button> -->
+	    </div>
+	  </div>
+    </header>
+	
+		
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<form>
+					<h2 class="text-center mb-4" style="color: black;">Payment Details</h2>
+					<div class="form-group">
+						<label for="cardNumber">Card Number</label>
+						<input type="text" class="form-control" id="cardNumber" placeholder="Enter card number" pattern="[0-9]{8}[0-9]{8}" required>
+					</div>
+					<div class="form-group">
+						<label for="cardHolder">Card Holder</label>
+						<input type="text" class="form-control" id="cardHolder" placeholder="Enter card holder name" required>
+					</div>
+					<div class="form-group">
+						<label for="expiryDate">Expiry Date</label>
+						<input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$">
+					</div>
+					<div class="form-group">
+						<label for="cvv">CVV</label>
+						<input type="text" class="form-control" id="cvv" placeholder="Enter CVV" pattern="^[0-9]{3, 4}$"  required>
+					</div>
+					<button type="button" class="btn btn-secondary btn-block" onclick="myFunction()">Submit</button>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+<br><br>
+	<!-- Add Bootstrap JavaScript -->
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNSB6T" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Add custom script -->
+
+</body>
+<!-- footer -->
+<footer class="bg-dark text-light py-5">
+	<div class="container-fluid">
+	  <div class="row">
+	    <div class="col-md-3">
+		<h3>About Us</h3>
+		<p>We are a family-owned restaurant that has been serving delicious food for over 20 years. Our menu features a
+		  wide variety of dishes made with the freshest ingredients.</p>
+	    </div>
+	    <div class="col-md-3">
+		<h3>Contact Us</h3>
+    
+		<p>Mr.Chef<br>
+		  Paryatan Bhavan, 2nd Floor, Patto,<br>
+		  Tamilnadu, India 403001 <br><br>
+		</p>
+    
+		<span class="glyphicon glyphicon-phone-alt" id="b"></span>
+		Contact No: 0832-2494204 <br>
+		<span class="glyphicon glyphicon-envelope" id="b"></span> Email: mr.chef@nic.in
+		</p>
+	    </div>
+	    <div class="col-md-3">
+		<h3>Legal</h2>
+		  <ul class="no-bullets">
+
+    
+		    <li>Terms & Conditions</li>
+		    <li>Refund & Cancellation</li>
+		    <li>Privacy Policy </li>
+		    <li> Cookie Policy</li>
+		    <li> Offer Terms
+		    <li> Phishing & Fraud</li>
+	    </div>
+    
+	    <div class="col-md-3">
+		<h3>Follow Us</h3>
+		<div class="list-unstyled">
+		  <a href="https://facebook.com/" target="_blank" class="fa fa-facebook"></a>
+		  <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+		  <a href="https://google.com/" target="_blank" class="fa fa-google"></a>
+		  <a href="https://youtube.com/" target="_blank" class="fa fa-youtube"></a>
+		  <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+    
+		</div>
+	    </div>
+	  </div>
+    </footer>
+    
+</html>

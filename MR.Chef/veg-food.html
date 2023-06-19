@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fast-food</title>
+  <link rel="icon" type="logo-icon" href="./image/logo_chef.jfif">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="restaurant.css">
+  <link rel="stylesheet" href="fast-food.css">
+  <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>  -->
+</head>
+
+<body>
+  <header>
+
+    <div class="main_head fixed-top">
+      <div class="logo"><a href="./food_restaurant.html"> <img src="./image/logo_chef.jfif" alt=" not found"
+            height="100px" width="100px">
+        </a></div>
+      <h1>Mr.Chef</h1>
+
+      <div class="states">
+        <!-- <label for="state" class="choose">Choose a state:</label> -->
+        <span class="glyphicon glyphicon-map-marker "></span>
+        <select name="state" id="state">
+          <option value="">Select state</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+
+      </div>
+      <div class="search">
+        <input class="search" id="home-search" maxlength="100" value="" placeholder="Search for food"
+          autocomplete="off">
+        <button class="search_button">
+          Search
+        </button>
+      </div>
+
+      <div class="login" text-right>
+        <button class="login" onclick="myFunction()">Log out</button>
+        <!-- <button class="Sign_up">Sign up</button> -->
+      </div>
+    </div>
+  </header>
+
+ <body>
+  <div class="container" style="margin-top: 110px;">
+
+    <div id="ad-goldon" class=" margin-10 margin-t-10" relative shadow>
+      <img alt="" class="block  radius-4 ico-full"
+        src="./image/offerveg.jpg">
+    </div>
+    <br>
+
+
+    <div class="grid margin-t-10 gutter-grid listing-main">
+      <div class="w-2-12 w-lg-3-12 listing-sidebar">
+        <div class="padding-10 bg-white radius-4 shadow">
+          <span class="block margin-b-10 padding-t-10 bold grey-dark">Date &amp; Meal Period</span>
+          <div class="margin-b-15 relative editbox">
+            <!-- <input type="date" value=" 23 Feb, 2023  • Midnight" class="bg-grey-secondary grey bold form-control"
+              readonly=""> -->
+            <!-- <span class="edit primary" id="filter_edit"> -->
+            <input type="date">
+            <!-- <span class="glyphicon glyphicon-pencil" width="15" height="15">edit</span>
+            </span> -->
+          </div>
+          <div class="flex margin-b-10 padding-b-10 padding-t-10 flex-between filter_show pointer align-v-center">
+            <div class=" grey-dark font-10">
+              <label for="fliter" class="choose">Apply Filters</label><br>
+
+              <select id="filter">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+              </select>
+              <button type="button" id="select">Select </button>
+            </div>
+
+            <!-- <div class="filter_toogle">
+              <svg width="14" height="9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <path
+                    d="m207.414 28.5 5.293-4.915a.882.882 0 0 0 0-1.313 1.055 1.055 0 0 0-1.414 0l-6 5.571a.882.882 0 0 0 0 1.314l6 5.571c.39.363 1.024.363 1.414 0a.882.882 0 0 0 0-1.313l-5.293-4.915z"
+                    id="a"></path>
+                </defs>
+                <use fill="#807c7c" fill-rule="nonzero" transform="rotate(-90 96 117.5)" xlink:href="#a"></use>
+              </svg>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="w-9-12 w-lg-9-12">
+        <div class="container-restaurant"id="lunch"value="lunch">
+          <div class="margin-t-20">
+            <div class="relative" id="restaurants" data-page="1">
+              <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+                <div class="grid">
+                  <div class="w-2-12">
+                    <a href=""> <img class="img1"src="./image/veg1.jpg" alt="img not found"
+                        style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                    </a>
+  
+                  </div>
+                  <div class="w-9-12 flex margin-t-12">
+                    <a href="">
+                      <h1 class="briyani"> Bombay rice</h1>
+                      <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <div class="offer">
+                          <p class="small bold font-13 offer_text flex align-v-center relative">
+                            <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                    <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                        <tspan x="4.24" y="14">%</tspan>
+                                    </text>
+                                </g>
+                            </svg>
+                            35% Off
+                        </p></div>
+                      
+  
+  
+  
+                  </div>
+                  <div class="flex margin-b-10">
+  
+                  </div>
+                  <div class="w-3-12">
+                    <div class="text-right">
+                      <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                      <h2 class="rupe">₹ 299</h2>
+                      <label class="cost">cost for two</label>
+                     
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+
+
+
+      
+      <div class="container-restaurant"id="Dinner"value="Dinner">
+        <div class="margin-t-20">
+          <div class="relative" id="restaurants" data-page="1">
+            <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+              <div class="grid">
+                <div class="w-2-12">
+                  <a href=""> <img class="img1" src="./image/veg2.jpg" alt="img not found"
+                      style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                  </a>
+
+                </div>
+                <div class="w-9-12 flex margin-t-12">
+                  <a href="">
+                    <h1 class="briyani">Emoice</h1>
+                    <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          25% Off
+                      </p></div>
+                    
+
+
+
+                </div>
+                <div class="flex margin-b-10">
+
+                </div>
+                <div class="w-3-12">
+                  <div class="text-right">
+                    <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                    
+                    <h2 class="rupe">₹ 220</h2>
+                    <label class="cost">cost for two</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-restaurant"id="Dinner"value="Dinner">
+        <div class="margin-t-20">
+          <div class="relative" id="restaurants" data-page="1">
+            <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+              <div class="grid">
+                <div class="w-2-12">
+                  <a href=""> <img class="img1" src="./image/veg3.jpg" alt="img not found"
+                      style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                  </a>
+
+                </div>
+                <div class="w-9-12 flex margin-t-12">
+                  <a href="">
+                    <h1 class="briyani">Stone Creamery</h1>
+                    <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          15% Off
+                      </p></div>
+                   
+                   
+
+
+
+                </div>
+                <div class="flex margin-b-10">
+
+                </div>
+                <div class="w-3-12">
+                  <div class="text-right">
+                    <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                    <h2 class="rupe">₹ 189</h2>
+                    <label class="cost">cost for two</label>
+                 
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-restaurant"id="Breakfast"value="Breakfast">
+        <div class="margin-t-20">
+          <div class="relative" id="restaurants" data-page="1">
+            <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+              <div class="grid">
+                <div class="w-2-12">
+                  <a href=""> <img class="img1"src="./image/veg4.jpg" alt="img not found"
+                      style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                  </a>
+
+                </div>
+                <div class="w-9-12 flex margin-t-12">
+                  <a href="">
+                    <h1 class="briyani">Masala Channa</h1>
+                    <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          20% Off
+                      </p></div>
+                  
+
+
+
+                </div>
+                <div class="flex margin-b-10">
+
+                </div>
+                <div class="w-3-12">
+                  <div class="text-right">
+                    <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                    <h2 class="rupe">₹ 380</h2>
+                    <label class="cost">cost for two</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-restaurant">
+        <div class="margin-t-20">
+          <div class="relative" id="restaurants" data-page="1">
+            <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+              <div class="grid">
+                <div class="w-2-12">
+                  <a href=""> <img class="img1" src="./image/veg5.jpg" alt="img not found"
+                      style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                  </a>
+
+                </div>
+                <div class="w-9-12 flex margin-t-12">
+                  <a href="">
+                    <h1 class="briyani"> Gobhi Aloo</h1>
+                    <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          35% Off
+                      </p></div>
+                   
+
+
+
+                </div>
+                <div class="flex margin-b-10">
+
+                </div>
+                <div class="w-3-12">
+                  <div class="text-right">
+                    <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                    <h2 class="rupe">₹ 190</h2>
+                    <label class="cost">cost for two</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="more">
+       <center> <button type="button" class="btn-btn-bg-info collapsed " data-bs-toggle="collapse" data-bs-target="#demo" aria-expanded="false">Read more</button></center><br>
+      <div id="demo" class="collapse">
+        <div class="container-restaurant">
+          <div class="margin-t-20">
+            <div class="relative" id="restaurants" data-page="1">
+              <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+                <div class="grid">
+                  <div class="w-2-12">
+                    <a href=""> <img class="img1"src="./image/veg6.jpg" alt="img not found"
+                        style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                    </a>
+  
+                  </div>
+                  <div class="w-9-12 flex margin-t-12">
+                    <a href="">
+                      <h1 class="briyani"> Mushroom Kofta</h1>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          25% Off
+                      </p></div>
+                   
+  
+  
+  
+                  </div>
+                  <div class="flex margin-b-10">
+  
+                  </div>
+                  <div class="w-3-12">
+                    <div class="text-right">
+                      <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                      <h2 class="rupe">₹ 299</h2>
+                      <label class="cost">cost for two</label>
+                    
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-restaurant">
+          <div class="margin-t-20">
+            <div class="relative" id="restaurants" data-page="1">
+              <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+                <div class="grid">
+                  <div class="w-2-12">
+                    <a href=""> <img class="img1"src="./image/veg7.jpg" alt="img not found"
+                        style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                    </a>
+
+                  </div>
+                  <div class="w-9-12 flex margin-t-12">
+                    <a href="">
+                      <h1 class="briyani"> Dahi Kebab </h1>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          20% Off
+                      </p></div>
+                      
+
+
+                      <!--                         
+                        <span class=" graey-light ">cost for two</span><br>
+                        <span class=" gray cost_for_tow">
+                          <span class="currency">₹</span>"200"
+                        </span></a> -->
+                  </div>
+                  <div class="flex margin-b-10">
+
+                  </div>
+                  <div class="w-3-12">
+                    <div class="text-right">
+                      <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                     
+                      <h2 class="rupe">₹ 150</h2>
+                      <label class="cost">cost for two</label>
+                    </div>
+                    <!-- <div class="clear">
+                          <div class="text-center margin-t-10">
+                             <a class="btn outline-btn height-40 block bold padding-10 font-14 apxor-click" href="#">Pay Bill</a>
+                          </div>
+
+                        </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-restaurant">
+          <div class="margin-t-20">
+            <div class="relative" id="restaurants" data-page="1">
+              <div class="padding-10 radius-4 bg-white restaurant margin-b-10">
+                <div class="grid">
+                  <div class="w-2-12">
+                    <a href=""> <img class="img1"src="./image/veg8.jpg" alt="img not found"
+                        style="margin: -r-15 pb-120;border-radius: 10px;" width="300px" height="190px">
+                    </a>
+
+                  </div>
+                  <div class="w-9-12 flex margin-t-12">
+                    <a href="">
+                      <h1 class="briyani">Aamras KiKadhi</h1>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <div class="offer">
+                        <p class="small bold font-13 offer_text flex align-v-center relative">
+                          <svg class="margin-r-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <g fill="none" fill-rule="evenodd">
+                                  <path fill="#D95931" fill-rule="nonzero" d="M10 19.049L6.91 19.511 4.681 17.321 1.91 15.878 1.394 12.796 0 10 1.394 7.204 1.91 4.122 4.681 2.679 6.91 0.489 10 0.951 13.09 0.489 15.319 2.679 18.09 4.122 18.606 7.204 20 10 18.606 12.796 18.09 15.878 15.319 17.321 13.09 19.511z"></path>
+                                  <text fill="#FFF" font-family="SFProDisplay-Black, SF Pro Display" font-size="12" font-weight="700" letter-spacing="-.1">
+                                      <tspan x="4.24" y="14">%</tspan>
+                                  </text>
+                              </g>
+                          </svg>
+                          15% Off
+                      </p></div>
+                      
+
+                  </div>
+                  <div class="flex margin-b-10">
+
+                  </div>
+                  <div class="w-3-12">
+                    <div class="text-right">
+                      <a href="delivery.html" class="btn  bold grey-dark">Pay Bill</a>
+                      <h2 class="rupe">₹ 250</h2>
+                      <label class="cost">cost for two</label>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+
+
+
+    </div>
+    </div>
+    </div>
+
+
+  </div>
+</body>
+ <!-- footer -->
+ <footer class="bg-dark text-light py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>About Us</h3><br>
+        <p>We are a family-owned restaurant that has been serving delicious food for over 20 years. Our menu features a
+          wide variety of dishes made with the freshest ingredients.</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Contact Us</h3><br>
+
+        <p>Mr.Chef<br>
+          Paryatan Bhavan, 2nd Floor, Patto,<br>
+          Tamilnadu, India 403001 <br><br>
+        </p>
+
+        <span class="glyphicon glyphicon-phone-alt" id="b"></span>
+        Contact No: 0832-2494204 <br>
+        <span class="glyphicon glyphicon-envelope" id="b"></span> Email: mr.chef@nic.in
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h3>Legal</h2>
+          <ul class="no-bullets">
+
+            <li>Terms & Conditions</li>
+            <li>Refund & Cancellation</li>
+            <li>Privacy Policy </li>
+            <li> Cookie Policy</li>
+            <li> Offer Terms
+            <li> Phishing & Fraud</li>
+      </div>
+
+      <div class="col-md-3">
+        <h3>Follow Us</h3>
+        <div class="list-unstyled">
+          <a href="https://facebook.com/" target="_blank" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+          <a href="https://google.com/" target="_blank" class="fa fa-google"></a>
+          <a href="https://youtube.com/" target="_blank" class="fa fa-youtube"></a>
+          <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+
+        </div>
+      </div>
+    </div>
+    <script>
+
+  document.getElementById("select").addEventListener('click',order);
+  // var options = document.getElementById("food").value;
+  function order(){
+    let filter = document.getElementById("filter").value;
+    if(filter == "Lunch"){
+      document.getElementById("lunch").classList.remove("hidden");
+      document.getElementById("Breakfast").classList.add("hidden");
+      document.getElementById("Dinner").classList.add("hidden");
+    }
+    if(filter == "Breakfast"){
+      document.getElementById("Breakfast").classList.remove("hidden");
+      document.getElementById("Dinner").classList.add("hidden");
+      document.getElementById("lunch").classList.add("hidden");
+    }
+    if(filter == "Dinner"){
+      document.getElementById("Breakfast").classList.add("hidden");
+      document.getElementById("Dinner").classList.remove("hidden");
+      document.getElementById("lunch").classList.add("hidden");
+    }
+  }
+
+      function myFunction() {
+
+      {
+            window.location.href = "logsign.html";
+        
+  
+      }}
+    </script>
+</footer>
+</html>
